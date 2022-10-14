@@ -1,5 +1,5 @@
-from dirt import Entity, EntityInstance, EntityComponent, EntitySystem
-import dirt as world
+from dirtpy import Entity, EntityInstance, EntityComponent, EntitySystem
+import dirtpy as world
 
 class Transform(EntityComponent):    
     x:float
