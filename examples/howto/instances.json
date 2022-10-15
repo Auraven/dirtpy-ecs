@@ -1,0 +1,22 @@
+[
+    {
+        "id": 0,
+        "entity_name": "player",
+        "components": {
+            "Transform": {
+                "x": 100.0,
+                "y": 200.0
+            },
+            "Velocity": {
+                "x": 0.0,
+                "y": 0.0
+            }
+        },
+        "name": "my_player",
+        "tags": [
+            "player",
+            "special"
+        ],
+        "enabled": true
+    }
+]
