@@ -161,7 +161,10 @@ def save(file_name: str):
     with open(file_name, 'w') as save_file:
         instance_json = []
         for instance in instance_dict.values():
-            instance_json.append(instance.dict())
+            instance_model = instance.model_dump()
+            for component_type in instance_model['components']:
+                instance_model['components'][component_type] = instance.get_component(component_type).model_dump()
+            instance_json.append(instance_model)
         json.dump(instance_json, save_file, indent=4)
 
 def load(file_name: str):
